@@ -1,0 +1,71 @@
+---
+import AstroApp from '../AstroApp.jsx'
+import '../index.css'
+
+export function getStaticPaths() {
+  const routes = [
+    'apps',
+    'apps/hola-mundo',
+    'apps/memorama',
+    'apps/gestor-tareas',
+    'apps/scape-room',
+    'apps/pokedex',
+    'apps/supermercado-de-colores',
+    'apps/sopa-de-letras',
+    'apps/rompecabezas',
+    'apps/4-imagenes-1-palabra',
+    'apps/bomba-loca',
+    'apps/context-api',
+    'apps/monopoly-santafe',
+    'apps/CardBattle-J&G',
+    'apps/gabyapps',
+    'apps/gabyapps/petbook-agenda-digital',
+    'apps/pagina-ferreteria',
+    'apps/react-router-demo',
+    'apps/custom-hooks',
+    'apps/contactos-bugueados',
+    'docs',
+    'docs/instalar-docker',
+    'docs/ollama-docker',
+    'docs/instalar-ollama',
+    'docs/instalar-node',
+    'docs/instalar-git',
+    'docs/vscode-setup',
+    'docs/git-cheatsheet',
+    'docs/react-hooks',
+    'docs/teoria-html',
+    'docs/teoria-css',
+    'docs/teoria-javascript',
+    'docs/teoria-js-avanzado',
+    'docs/teoria-react',
+    'docs/teoria-vuejs',
+    'docs/teoria-typescript',
+    'docs/teoria-context-api',
+    'docs/teoria-react-router',
+    'docs/teoria-custom-hooks',
+  ]
+
+  return routes.map((path) => ({ params: { path } }))
+}
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Curso Aplicaciones Web 2026</title>
+  </head>
+  <body>
+    <AstroApp client:only="react" />
+  </body>
+  <style>
+    body {
+      animation: reveal 0.18s ease both;
+    }
+    @keyframes reveal {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</html>

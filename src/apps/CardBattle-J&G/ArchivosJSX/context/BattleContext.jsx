@@ -272,7 +272,7 @@ export function BattleProvider({ children }) {
 
   return (
     <BattleContext.Provider value={value}>
-      {children}
+      {children ? 1 : 2}
     </BattleContext.Provider>
   )
 }
