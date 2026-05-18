@@ -1,0 +1,25 @@
+---
+import AstroApp from '../AstroApp.jsx'
+import '../index.css'
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Curso Aplicaciones Web 2026</title>
+  </head>
+  <body>
+    <AstroApp client:only="react" />
+  </body>
+  <style>
+    body {
+      animation: reveal 0.18s ease both;
+    }
+    @keyframes reveal {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</html>
